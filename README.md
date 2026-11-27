@@ -4,8 +4,8 @@ Python library (no hard dependencies; `.msg` needs the permissive extra `msg`) t
 structure (`{"name", "content": BytesIO}` leaves, `{"name", "children": [...]}` folders) with hard
 **decompression-bomb guards**. The import name is `belegtool_archives`.
 
-Extracted from the DigitalerUnterlagenOrdner (BelegTool) project, which consumes it for its import
-pipeline. It does not import the host application.
+Used by the DigitalerUnterlagenOrdner (BelegTool) project for its import pipeline. It does not import the
+host application. Origin: split out with its full history from DigitalerUnterlagenOrdner (`packages/belegtool-archives`) on 2026-11-27.
 
 ## What it does
 
@@ -37,7 +37,7 @@ Without `convert_member` only `.pdf` members pass through; every other member de
 ```
 pip install .                      # from this directory
 pip install ".[msg]"               # + .msg support (extract-msg, GPLv3 - see below)
-pip install "belegtool-archives @ git+https://github.com/<owner>/belegtool-archives.git@v0.1.0"
+pip install "belegtool-archives @ git+https://github.com/tobiasheinrichfaska/belegtool-archives.git@v0.1.0"
 pip install -e .[dev] && pytest    # development
 ```
 
